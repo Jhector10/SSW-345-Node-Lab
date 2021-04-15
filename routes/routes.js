@@ -46,6 +46,7 @@ const router = app => {
 
     // Add a new developer
     app.post('/handles', (request, response) => {
+        //Removed the result variable below since it was unused, Julio Lora
         pool.query('INSERT INTO Handle SET ?', request.body, (error) => {
             if (error) throw error;
 
